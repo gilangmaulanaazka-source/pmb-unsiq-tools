@@ -1,29 +1,22 @@
-# Marketing Funnel Worksheet PMB UNSIQ
+# A/B Testing Worksheet Digital Marketing PMB UNSIQ
 
-Website statis interaktif untuk memetakan strategi Marketing Funnel PMB UNSIQ.
+Website statis interaktif untuk membantu tim PMB UNSIQ merancang, mengisi, mencetak, dan mengevaluasi eksperimen A/B Testing digital marketing.
 
-## Fitur
-- Landing page interaktif
-- Visualisasi marketing funnel
-- Strategi konten, channel, CTA, metrik, dan diagnosis per fase
-- Worksheet online yang bisa diisi
-- Dashboard otomatis untuk melihat drop-off dan prioritas optimasi
-- Simpan data sementara di browser menggunakan localStorage
-- Template contoh pengisian
-- Tombol print dan export PDF landscape
+## Isi File
+- `index.html` — struktur halaman landing page, worksheet, dan dashboard.
+- `style.css` — desain dominan hijau, responsive, dan print landscape.
+- `script.js` — simpan data otomatis, template contoh, kalkulasi dashboard, cetak/export PDF.
+- `README.txt` — panduan penggunaan.
 
-## Cara Pakai
-1. Ekstrak ZIP.
-2. Buka `index.html` di browser.
-3. Klik fase funnel untuk melihat strategi.
-4. Isi worksheet atau klik tombol `Isi Template`.
-5. Klik `Export PDF`.
-6. Pada dialog print browser, pilih `Save as PDF` dan orientasi `Landscape`.
+## Cara Membuka
+1. Ekstrak file ZIP.
+2. Buka `index.html` menggunakan browser.
+3. Isi worksheet.
+4. Klik tombol **Isi Template** untuk contoh pengisian.
+5. Klik **Cetak / Export PDF** lalu pilih **Save as PDF**.
+6. Pastikan orientasi PDF adalah **Landscape** agar semua konten terbaca rapi.
 
-## File
-- index.html
-- style.css
-- script.js
-- README.txt
-
-Website ini bisa langsung diunggah ke hosting statis seperti cPanel, Netlify, Vercel, GitHub Pages, atau hosting kampus.
+## Catatan
+- Data tersimpan sementara di browser menggunakan localStorage.
+- Website tidak membutuhkan database.
+- Bisa langsung diunggah ke hosting statis seperti cPanel, Netlify, Vercel, GitHub Pages, atau hosting kampus.
