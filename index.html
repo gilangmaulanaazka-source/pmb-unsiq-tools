@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marketing Funnel Worksheet | PMB UNSIQ</title>
+  <meta name="description" content="Worksheet Marketing Funnel PMB UNSIQ dengan visualisasi funnel, strategi konten per fase, dashboard, simpan otomatis, print, dan export PDF landscape." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="bg-orbs"></div>
+
+  <header class="topbar no-print">
+    <div class="brand">
+      <div class="brand-mark">U</div>
+      <div>
+        <strong>PMB UNSIQ</strong>
+        <span>Marketing Funnel Worksheet</span>
+      </div>
+    </div>
+
+    <nav>
+      <a href="#framework">Framework</a>
+      <a href="#strategy">Strategi</a>
+      <a href="#worksheet">Worksheet</a>
+      <a href="#dashboard">Dashboard</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="btn btn-light" id="fillTemplate">Isi Template</button>
+      <button class="btn btn-light" id="resetData">Reset</button>
+      <button class="btn btn-main" id="printPage">Export PDF</button>
+    </div>
+  </header>
+
+  <main class="container" id="printArea">
+    <section class="hero">
+      <div class="hero-text">
+        <div class="eyebrow">Digital Marketing PMB UNSIQ</div>
+        <h1>Marketing Funnel Worksheet untuk Merancang Strategi PMB yang Lebih Tepat Sasaran</h1>
+        <p>
+          Worksheet ini membantu tim PMB memetakan perjalanan calon mahasiswa dari mengenal UNSIQ,
+          mulai tertarik, mempertimbangkan program studi, berniat mendaftar, hingga menjadi pendaftar dan advokat kampus.
+        </p>
+        <div class="hero-buttons no-print">
+          <a href="#worksheet" class="btn btn-main">Mulai Isi Worksheet</a>
+          <a href="#strategy" class="btn btn-soft">Lihat Strategi Funnel</a>
+        </div>
+      </div>
+
+      <aside class="hero-panel">
+        <div class="pulse-card">
+          <span>Funnel Health</span>
+          <strong id="heroHealth">Belum dihitung</strong>
+          <small>Diupdate otomatis dari data funnel</small>
+        </div>
+        <div class="mini-funnel">
+          <div>Awareness</div>
+          <div>Interest</div>
+          <div>Consideration</div>
+          <div>Intent</div>
+          <div>Conversion</div>
+          <div>Advocacy</div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="panel" id="framework">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Framework</div>
+          <h2>Dasar Pemikiran Marketing Funnel PMB</h2>
+        </div>
+        <p>
+          Funnel digunakan untuk memetakan konten, channel, CTA, dan metrik sesuai kesiapan calon mahasiswa.
+          Karena keputusan kuliah melibatkan riset, orang tua, biaya, prospek kerja, dan kepercayaan, funnel ini dibuat dengan pendekatan journey yang bisa berulang.
+        </p>
+      </div>
+
+      <div class="principles">
+        <article>
+          <b>01</b>
+          <h3>Stage-specific content</h3>
+          <p>Konten awareness sebaiknya membangun perhatian dan problem awareness; konten consideration membantu audiens membandingkan pilihan; konten decision mendorong aksi.</p>
+        </article>
+        <article>
+          <b>02</b>
+          <h3>Exploration & evaluation</h3>
+          <p>Calon mahasiswa bisa berulang kali mencari informasi dan mengevaluasi kampus sebelum mendaftar, sehingga konten harus siap di banyak titik kontak.</p>
+        </article>
+        <article>
+          <b>03</b>
+          <h3>Retention & advocacy</h3>
+          <p>Setelah mendaftar, pengalaman follow-up, daftar ulang, testimoni, dan referral tetap penting untuk menguatkan keputusan dan membentuk rekomendasi.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="funnel-section" id="strategy">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Visualisasi Funnel</div>
+          <h2>Strategi Konten dan CTA per Fase</h2>
+        </div>
+        <p>Klik setiap fase untuk melihat rekomendasi konten, channel, CTA, metrik, dan masalah yang perlu didiagnosis.</p>
+      </div>
+
+      <div class="funnel-layout">
+        <div class="funnel-visual no-print" id="funnelVisual">
+          <button class="funnel-step active" data-stage="awareness">
+            <span>Awareness</span>
+            <small>Storytelling & reach</small>
+          </button>
+          <button class="funnel-step" data-stage="interest">
+            <span>Interest</span>
+            <small>Engagement & curiosity</small>
+          </button>
+          <button class="funnel-step" data-stage="consideration">
+            <span>Consideration</span>
+            <small>Comparison & trust</small>
+          </button>
+          <button class="funnel-step" data-stage="intent">
+            <span>Intent</span>
+            <small>CTA & lead capture</small>
+          </button>
+          <button class="funnel-step" data-stage="conversion">
+            <span>Conversion</span>
+            <small>Registration action</small>
+          </button>
+          <button class="funnel-step" data-stage="advocacy">
+            <span>Advocacy</span>
+            <small>Referral & loyalty</small>
+          </button>
+        </div>
+
+        <div class="strategy-card" id="strategyCard">
+          <div class="stage-pill" id="stagePill">Awareness</div>
+          <h3 id="stageTitle">Membangun kesadaran dan kedekatan awal</h3>
+          <p id="stageDescription">
+            Fase ini cocok untuk konten storytelling yang memperkenalkan identitas kampus, kehidupan mahasiswa, nilai pesantren, prestasi, dan peluang masa depan tanpa langsung memaksa daftar.
+          </p>
+
+          <div class="strategy-grid">
+            <div>
+              <h4>Konten yang cocok</h4>
+              <ul id="contentList"></ul>
+            </div>
+            <div>
+              <h4>Channel utama</h4>
+              <ul id="channelList"></ul>
+            </div>
+            <div>
+              <h4>CTA disarankan</h4>
+              <ul id="ctaList"></ul>
+            </div>
+            <div>
+              <h4>Metrik</h4>
+              <ul id="metricList"></ul>
+            </div>
+          </div>
+
+          <div class="diagnosis">
+            <strong>Diagnosis masalah:</strong>
+            <span id="diagnosisText"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="print-strategy">
+        <h3>Ringkasan Strategi Funnel</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Fase</th>
+              <th>Tujuan</th>
+              <th>Konten Cocok</th>
+              <th>CTA</th>
+              <th>Metrik</th>
+            </tr>
+          </thead>
+          <tbody id="strategyTable"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="worksheet" id="worksheet">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Worksheet Online</div>
+          <h2>Isi Data Marketing Funnel PMB</h2>
+        </div>
+        <p>Data tersimpan otomatis di browser. Gunakan angka funnel untuk melihat drop-off dan rekomendasi prioritas.</p>
+      </div>
+
+      <form id="funnelForm">
+        <div class="form-grid">
+          <label>
+            Nama Campaign
+            <input name="campaignName" placeholder="Contoh: PMB UNSIQ 2026 - Campaign Pendaftaran Gelombang 1" />
+          </label>
+
+          <label>
+            Periode Campaign
+            <input name="campaignPeriod" placeholder="Contoh: 1 Juli - 31 Agustus 2026" />
+          </label>
+
+          <label>
+            Target Audiens Utama
+            <input name="mainAudience" placeholder="Contoh: Siswa kelas 12, gap year, orang tua calon mahasiswa" />
+          </label>
+
+          <label>
+            Persona Prioritas
+            <input name="persona" placeholder="Contoh: Siswa MA/SMA yang mencari kampus Islami dengan biaya terjangkau" />
+          </label>
+
+          <label class="span-2">
+            Problem Utama Funnel Saat Ini
+            <textarea name="mainProblem" placeholder="Contoh: Reach sudah tinggi, tetapi klik ke WhatsApp dan pendaftaran masih rendah. Calon mahasiswa banyak bertanya biaya, beasiswa, dan prospek kerja."></textarea>
+          </label>
+        </div>
+
+        <div class="funnel-inputs">
+          <div class="stage-input" data-key="awareness">
+            <div>
+              <strong>Awareness</strong>
+              <span>Melihat/mengenal UNSIQ</span>
+            </div>
+            <input type="number" min="0" name="awarenessCount" placeholder="Jumlah reach / impression" />
+            <textarea name="awarenessNote" placeholder="Catatan konten, channel, atau masalah di fase awareness"></textarea>
+          </div>
+
+          <div class="stage-input" data-key="interest">
+            <div>
+              <strong>Interest</strong>
+              <span>Mulai tertarik/berinteraksi</span>
+            </div>
+            <input type="number" min="0" name="interestCount" placeholder="Jumlah engagement / klik profil" />
+            <textarea name="interestNote" placeholder="Catatan pertanyaan, engagement, atau hambatan minat"></textarea>
+          </div>
+
+          <div class="stage-input" data-key="consideration">
+            <div>
+              <strong>Consideration</strong>
+              <span>Membandingkan dan mencari bukti</span>
+            </div>
+            <input type="number" min="0" name="considerationCount" placeholder="Jumlah lead / kunjungan landing page" />
+            <textarea name="considerationNote" placeholder="Catatan informasi yang dibutuhkan: biaya, prodi, beasiswa, fasilitas"></textarea>
+          </div>
+
+          <div class="stage-input" data-key="intent">
+            <div>
+              <strong>Intent</strong>
+              <span>Berniat mendaftar</span>
+            </div>
+            <input type="number" min="0" name="intentCount" placeholder="Jumlah klik daftar / chat admin" />
+            <textarea name="intentNote" placeholder="Catatan CTA, form, WhatsApp, dan kendala sebelum submit"></textarea>
+          </div>
+
+          <div class="stage-input" data-key="conversion">
+            <div>
+              <strong>Conversion</strong>
+              <span>Submit pendaftaran</span>
+            </div>
+            <input type="number" min="0" name="conversionCount" placeholder="Jumlah pendaftar" />
+            <textarea name="conversionNote" placeholder="Catatan conversion, biaya, follow-up, dan kendala pendaftaran"></textarea>
+          </div>
+
+          <div class="stage-input" data-key="advocacy">
+            <div>
+              <strong>Retention / Advocacy</strong>
+              <span>Daftar ulang, referral, testimoni</span>
+            </div>
+            <input type="number" min="0" name="advocacyCount" placeholder="Jumlah daftar ulang / referral / testimoni" />
+            <textarea name="advocacyNote" placeholder="Catatan follow-up, referral, testimoni, dan konten alumni"></textarea>
+          </div>
+        </div>
+
+        <div class="form-grid">
+          <label>
+            Strategi Prioritas
+            <textarea name="priorityStrategy" placeholder="Contoh: Optimasi fase Consideration dengan konten biaya, beasiswa, prospek karier, dan testimoni mahasiswa."></textarea>
+          </label>
+
+          <label>
+            Eksperimen yang Akan Diuji
+            <textarea name="experimentPlan" placeholder="Contoh: Uji CTA 'Konsultasi Jurusan Gratis' vs 'Daftar Sekarang' pada landing page dan Instagram Ads."></textarea>
+          </label>
+
+          <label class="span-2">
+            Keputusan / Action Plan
+            <textarea name="actionPlan" placeholder="Contoh: Buat 5 konten storytelling awareness, 3 konten comparison prodi, 2 landing page CTA, dan tracking UTM untuk semua channel."></textarea>
+          </label>
+        </div>
+      </form>
+    </section>
+
+    <section class="dashboard" id="dashboard">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Dashboard Otomatis</div>
+          <h2>Ringkasan Performa Funnel</h2>
+        </div>
+        <div class="save-status" id="saveStatus">Data belum berubah</div>
+      </div>
+
+      <div class="stats">
+        <article>
+          <span>Total Awareness</span>
+          <strong id="statAwareness">0</strong>
+          <small>Reach / impression awal</small>
+        </article>
+        <article>
+          <span>Total Conversion</span>
+          <strong id="statConversion">0</strong>
+          <small>Pendaftar akhir</small>
+        </article>
+        <article>
+          <span>Overall Conversion</span>
+          <strong id="statOverall">0%</strong>
+          <small>Conversion ÷ awareness</small>
+        </article>
+        <article class="priority">
+          <span>Prioritas Optimasi</span>
+          <strong id="statPriority">Belum ada data</strong>
+          <small>Berdasarkan drop-off terbesar</small>
+        </article>
+      </div>
+
+      <div class="dashboard-table">
+        <table>
+          <thead>
+            <tr>
+              <th>Fase</th>
+              <th>Jumlah</th>
+              <th>Conversion ke Fase Ini</th>
+              <th>Drop-off dari Fase Sebelumnya</th>
+              <th>Rekomendasi Cepat</th>
+            </tr>
+          </thead>
+          <tbody id="dashboardRows"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="panel references">
+      <div class="eyebrow">Referensi Konseptual</div>
+      <h2>Catatan rujukan</h2>
+      <p>
+        Framework ini mengadaptasi prinsip buyer journey/funnel: awareness, consideration, decision/conversion, serta retention/advocacy.
+        Pada praktiknya, perjalanan calon mahasiswa tidak selalu linear sehingga worksheet ini juga menyiapkan fase evaluasi berulang dan advocacy.
+      </p>
+    </section>
+
+    <footer>
+      <strong>Marketing Funnel Worksheet PMB UNSIQ</strong>
+      <span>Untuk perencanaan strategi konten, CTA, channel, tracking, dan optimasi pendaftaran mahasiswa baru.</span>
+    </footer>
+  </main>
+
+  <div class="floating no-print">
+    <button class="btn btn-soft" id="toTop">↑ Atas</button>
+    <button class="btn btn-main" id="printFloating">Export PDF</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
